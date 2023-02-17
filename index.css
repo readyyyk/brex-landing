@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --accent: #F46A35;
+    --main: #212121;
+}
+  
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto";
+    color: var(--main);
+}
+
+a{
+    color: var(--main);
+    transition: all .17s ease-in-out;
+    text-decoration: none;
+}
+a:hover{
+    color: var(--accent);
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+nav > div {
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+nav > div > div:first-child{
+    display: flex;
+}
+nav > div > div:first-child > ul{
+    list-style-type: none;
+    display: flex;
+}
+nav > div > div:first-child > ul > li > a{
+    display: flex;
+    font-size: 18px;
+    margin:  .5em 1em;
+    width: max-content;
+}
+nav > div > div:first-child > ul > li > a > img{
+    margin-left: .4em;
+}
+nav > div > div:last-child{
+    margin-left: 3em;
+    display: flex;
+    align-items: center;
+}
+nav > div > div:last-child > a{
+    margin: 0 1em;
+}
+nav > div > div:last-child > a:last-of-type{
+    border-radius: 10px;
+    color: #fff;
+    background: var(--accent);
+    padding: .6em 1.7em;
+}
+nav > div > div:last-child > a:last-of-type:hover{
+    color: var(--accent);
+    background: var(--main);
+    padding: .8em .7em;
+    margin: 0 2em;
+}
