@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    --accent: #F46A35;
+    --accent: #f46a35;
     --main: #212121;
+    --grey: #0000001A;
 }
   
 
 * {
     box-sizing: border-box;
 }
-
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-weight: normal;
+}
 body {
     margin: 0;
     font-family: "Roboto";
@@ -24,18 +28,83 @@ a{
 a:hover{
     color: var(--accent);
 }
+a.colored{
+    color: var(--accent);
+}
+a.colored:hover{
+    color: var(--main);
+}
+hr {
+    border-color: var(--grey);
+    margin: 2rem 0;
+}
 
+
+.btn {
+    outline: none;
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+    padding: 1em 2em;
+    font-size: 14px;
+    color: var(--main);
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition: all .17s ease-in-out;
+}
+.btn:hover{
+    top: -2px;
+}
+.btn-colored{
+    color: #fff;
+    background-color: var(--accent);
+    border: none;
+}
+.btn-colored:hover{
+    color: var(--accent);
+    background-color: var(--main);
+}
+
+/* 'library' */
+.df{
+    display: flex;
+}
+.f-column{
+    flex-direction: column;
+}
+.jc-c{
+    justify-content: center;
+}
+.ai-c{
+    align-items: center;
+}
+section{
+    background: #fff;
+    width: 1440px;
+    padding: 0 3rem;
+}
+h1.section-title{
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 1.6px;
+    font-weight: normal;
+}
+
+
+/* navbar */
 nav {
     width: 100%;
     position: fixed;
     left: 0;
     top: 0;
-    background: #fff;
     display: flex;
     justify-content: center;
 }
 nav > div {
+    background: #fff;
     max-width: 1440px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 2em;
@@ -75,4 +144,37 @@ nav > div > div:last-child > a:last-of-type:hover{
     background: var(--main);
     padding: .8em .7em;
     margin: 0 2em;
+}
+
+main {
+    margin-top: 4rem;
+}
+
+section:nth-child(1){
+    /* height: calc(100vh - 4rem); */
+    padding-right: 0;
+    justify-content: space-between;
+}
+section:nth-child(1) > div > .section-title{
+    margin: 3rem 0 2rem 0;
+    width: 15em;
+}
+section:nth-child(1) > div > div > .btn{
+    margin-bottom: 1rem;
+}
+section:nth-child(1) > div > div > .btn:first-child{
+    margin-right: 1rem;
+}
+section:nth-child(1) > div > div > div > h4{
+    margin-right: 10rem;
+}
+section:nth-child(1) > div > div > div > h4:first-of-type{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    line-height: 20px;
+}
+
+section:nth-child(2){
+    justify-content: space-between;
+    padding: 4rem 2rem;
 }
