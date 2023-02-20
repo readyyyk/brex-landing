@@ -39,7 +39,7 @@ hr {
     margin: 2rem 0;
 }
 
-
+/* 'library' */
 .btn {
     outline: none;
     border: 1px solid var(--grey);
@@ -65,8 +65,23 @@ hr {
     color: var(--accent);
     background-color: var(--main);
 }
+.btn-white{
+    color: #fff;
+    border-color: #fff;
+}
+.btn-white:hover{
+    color: var(--accent);
+    background-color: #fff;
+}
+.btn-black{
+    color: var(--main);
+    border-color: var(--main);
+}
+.btn-black:hover{
+    color: var(--accent);
+    background-color: var(--main);
+}
 
-/* 'library' */
 .df{
     display: flex;
 }
@@ -79,6 +94,9 @@ hr {
 .ai-c{
     align-items: center;
 }
+.t-center{
+    text-align: center;
+}
 section{
     background: #fff;
     width: 1440px;
@@ -88,6 +106,25 @@ h1.section-title{
     font-size: 40px;
     line-height: 52px;
     letter-spacing: 1.6px;
+    font-weight: normal;
+}
+h2.section-title{
+    font-size: 19px;
+    line-height: 32px;
+    letter-spacing: .4px;   
+    font-weight: normal;
+}
+
+h1.in-section-title{
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: .64px;
+    font-weight: normal;
+}
+h2.in-section-title{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .32px;   
     font-weight: normal;
 }
 
@@ -146,10 +183,12 @@ nav > div > div:last-child > a:last-of-type:hover{
     margin: 0 2em;
 }
 
+/* main */
 main {
     margin-top: 4rem;
 }
 
+/* section 1 */
 section:nth-child(1){
     /* height: calc(100vh - 4rem); */
     padding-right: 0;
@@ -174,7 +213,45 @@ section:nth-child(1) > div > div > div > h4:first-of-type{
     line-height: 20px;
 }
 
+/* section 2 */
 section:nth-child(2){
     justify-content: space-between;
     padding: 4rem 2rem;
+}
+
+/* section 3 */
+section:nth-child(3) {
+    margin-top: 7rem;
+    padding: 0 1rem;
+}
+section:nth-child(3) h1.section-title {
+    margin-bottom: .5rem;
+}
+section:nth-child(3) h2.section-title {
+    margin-bottom: 3rem;
+}
+section:nth-child(3) > div {
+    padding: 0 1rem;
+}
+section:nth-child(3) > div > div {
+    background-size: cover;
+    max-width: 580px;
+}
+section:nth-child(3) > div > div > div{
+    padding: 3rem;
+    padding-bottom: 0;
+}
+section:nth-child(3) h1.in-section-title{
+    margin-bottom: .5rem;
+}
+section:nth-child(3) h2.in-section-title{
+    margin-bottom: 1.5rem;
+}
+section:nth-child(3) > div > div:first-child {
+    background: url(src/solutions-bg/IMAGE.jpg);
+    color: #fff;
+    margin-right: .5rem;
+}
+section:nth-child(3) > div > div:last-child {
+    background: url(src/solutions-bg/IMAGE-1.jpg);
 }
